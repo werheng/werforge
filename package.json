@@ -1,0 +1,77 @@
+{
+  "name": "werkit",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.15.2",
+  "description": "Dev kit for me.",
+  "author": "Werheng <werheng.zhang@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/werheng/werkit#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/werheng/werkit"
+  },
+  "bugs": "https://github.com/werheng/werkit/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch src",
+    "build": "tsup",
+    "play": "cd playground && pnpm run dev",
+    "play:build": "cd playground && pnpm run build",
+    "play:preview": "cd playground && pnpm run preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "commit": "cz",
+    "release": "bumpp -r",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "deps": "pnpx taze -r",
+    "deps:up": "pnpx taze -wr"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.12.1",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cz-commitlint": "^19.6.1",
+    "@types/node": "^22.10.3",
+    "bumpp": "^9.9.2",
+    "commitizen": "^4.3.1",
+    "eslint": "^9.17.0",
+    "lint-staged": "^15.3.0",
+    "simple-git-hooks": "^2.11.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "pnpm commitlint --edit"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}
