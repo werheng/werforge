@@ -1,17 +1,17 @@
 {
-  "name": "werkit",
+  "name": "werforge",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@9.15.2",
   "description": "Dev kit for me.",
   "author": "Werheng <werheng.zhang@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/werheng/werkit#readme",
+  "homepage": "https://github.com/werheng/werforge#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/werheng/werkit"
+    "url": "https://github.com/werheng/werforge"
   },
-  "bugs": "https://github.com/werheng/werkit/issues",
+  "bugs": "https://github.com/werheng/werforge/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
