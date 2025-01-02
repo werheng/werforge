@@ -8,7 +8,7 @@ Dev kit for me.
 
 ## License
 
-[MIT](./LICENSE) License © 2024-PRESENT [Werheng Zhang](https://github.com/werheng)
+[MIT](./LICENSE) License © 2025-PRESENT [Werheng Zhang](https://github.com/werheng)
 
 <!-- Badges -->
 

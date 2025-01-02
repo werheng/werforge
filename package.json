@@ -24,7 +24,11 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "werforge": "./bin/cli.mjs"
+  },
   "files": [
+    "bin",
     "dist"
   ],
   "scripts": {
@@ -35,24 +39,27 @@
     "play:preview": "cd playground && pnpm run preview",
     "test": "vitest",
     "test:run": "vitest run",
-    "commit": "cz",
+    "commit": "node ./bin/cli.mjs commit",
     "release": "bumpp -r",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "deps": "pnpx taze -r",
     "deps:up": "pnpx taze -wr"
   },
-  "devDependencies": {
-    "@antfu/eslint-config": "^3.12.1",
+  "dependencies": {
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@commitlint/cz-commitlint": "^19.6.1",
+    "citty": "^0.1.6",
+    "commitizen": "^4.3.1",
+    "lint-staged": "^15.3.0",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.12.1",
     "@types/node": "^22.10.3",
     "bumpp": "^9.9.2",
-    "commitizen": "^4.3.1",
     "eslint": "^9.17.0",
-    "lint-staged": "^15.3.0",
-    "simple-git-hooks": "^2.11.1",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
@@ -68,10 +75,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
   }
 }
