@@ -1,14 +1,9 @@
 import { createRequire } from 'node:module'
-import { dirname, join } from 'node:path'
+import { join } from 'node:path'
 import process from 'node:process'
-import { fileURLToPath } from 'node:url'
 import { defineCommand } from 'citty'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
 const require = createRequire(import.meta.url)
-const bootstrap = require('commitizen/dist/cli/git-cz.js').bootstrap
 
 const commit = defineCommand({
   meta: {
@@ -17,8 +12,11 @@ const commit = defineCommand({
   },
   run() {
     process.argv.pop()
+
+    const bootstrap = require('commitizen/dist/cli/git-cz.js').bootstrap
+
     bootstrap({
-      cliPath: join(__dirname, '../node_modules/commitizen'),
+      cliPath: join(require.resolve('commitizen'), '../../'),
       config: {
         path: '@commitlint/cz-commitlint',
       },
