@@ -28,6 +28,7 @@
     "werforge": "./bin/cli.mjs"
   },
   "files": [
+    ".config",
     "bin",
     "dist"
   ],
@@ -66,7 +67,7 @@
     "vitest": "^2.1.8"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged -c .config/lint-staged.js",
-    "commit-msg": "npx commitlint --config .config/commitlint.js --edit"
+    "pre-commit": "node ./bin/cli.mjs lint-staged",
+    "commit-msg": "node ./bin/cli.mjs commitlint"
   }
 }

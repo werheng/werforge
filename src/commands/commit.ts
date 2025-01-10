@@ -5,10 +5,10 @@ import { defineCommand } from 'citty'
 
 const require = createRequire(import.meta.url)
 
-const commit = defineCommand({
+export default defineCommand({
   meta: {
     name: 'commit',
-    description: 'commit changes',
+    description: 'git commit changes',
   },
   run() {
     process.argv.pop()
@@ -23,5 +23,3 @@ const commit = defineCommand({
     })
   },
 })
-
-export default commit
