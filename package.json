@@ -65,15 +65,7 @@
     "vitest": "^2.1.8"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged",
-    "commit-msg": "pnpm commitlint --edit"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+    "pre-commit": "lint-staged -c .config/lint-staged.js",
+    "commit-msg": "commitlint --config .config/commitlint.js --edit"
   }
 }
