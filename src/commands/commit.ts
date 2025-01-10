@@ -18,7 +18,7 @@ const commit = defineCommand({
     bootstrap({
       cliPath: join(require.resolve('commitizen'), '../../'),
       config: {
-        path: '@commitlint/cz-commitlint',
+        path: 'cz-conventional-changelog',
       },
     })
   },
