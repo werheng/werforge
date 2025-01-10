@@ -12,6 +12,7 @@ export const main = defineCommand({
   subCommands: {
     'commit': () => import('./commit').then(_default),
     'commitlint': () => import('./commitlint').then(_default),
+    'init': () => import('./init').then(_default),
     'lint-staged': () => import('./lint-staged').then(_default),
   },
 })
