@@ -48,10 +48,10 @@
     "deps:up": "pnpx taze -wr"
   },
   "dependencies": {
-    "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "citty": "^0.1.6",
     "commitizen": "^4.3.1",
+    "commitlint": "^19.6.1",
     "cz-conventional-changelog": "^3.3.0",
     "inquirer": "9.3.7",
     "lint-staged": "^15.3.0",
@@ -68,7 +68,7 @@
     "vitest": "^2.1.8"
   },
   "simple-git-hooks": {
-    "pre-commit": "node ./bin/cli.mjs lint-staged",
-    "commit-msg": "node ./bin/cli.mjs commitlint"
+    "pre-commit": "npx lint-staged --config .config/lint-staged.js",
+    "commit-msg": "npx commitlint --edit --config .config/commitlint.js"
   }
 }

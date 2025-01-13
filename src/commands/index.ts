@@ -10,10 +10,8 @@ export const main = defineCommand({
     description: pkg.description,
   },
   subCommands: {
-    'commit': () => import('./commit').then(_default),
-    'commitlint': () => import('./commitlint').then(_default),
-    'init': () => import('./init').then(_default),
-    'lint-staged': () => import('./lint-staged').then(_default),
+    commit: () => import('./commit').then(_default),
+    init: () => import('./init').then(_default),
   },
 })
 
