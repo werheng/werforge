@@ -6,6 +6,22 @@
 
 Dev kit for me.
 
+## Usage
+
+### Install
+
+```bash
+pnpm add werforge commitlint lint-staged simple-git-hooks -D
+```
+
+### Init
+
+```bash
+npx werforge init
+```
+
+then you can see `.config` folder in your project root and some confuration fields in `package.json`.
+
 ## License
 
 [MIT](./LICENSE) License © 2025-PRESENT [Werheng Zhang](https://github.com/werheng)
