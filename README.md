@@ -22,6 +22,22 @@ npx werforge init
 
 then you can see `.config` folder in your project root.
 
+### Git Commit
+
+> Powered by `commitizen`.
+
+add `commit` script to your `package.json`:
+
+```json
+{
+  "scripts": {
+    "commit": "werforge commit"
+  }
+}
+```
+
+then you can use `pnpm run commit` to commit your code with `commitlint` and `lint-staged`.
+
 ## License
 
 [MIT](./LICENSE) License © 2025-PRESENT [Werheng Zhang](https://github.com/werheng)
