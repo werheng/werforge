@@ -20,7 +20,7 @@ pnpm add werforge commitlint lint-staged simple-git-hooks -D
 npx werforge init
 ```
 
-then you can see `.config` folder in your project root and some confuration fields in `package.json`.
+then you can see `.config` folder in your project root.
 
 ## License
 
