@@ -15,7 +15,7 @@ export default defineCommand({
       resolve(cwd(), '.config'),
       {
         recursive: true,
-        force: true,
+        force: false,
       },
     )
 
