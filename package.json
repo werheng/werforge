@@ -1,7 +1,7 @@
 {
   "name": "werforge",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "packageManager": "pnpm@10.6.3",
   "description": "Dev kit for me.",
   "author": "Werheng <werheng.zhang@gmail.com>",
