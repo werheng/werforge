@@ -2,7 +2,7 @@
   "name": "werforge",
   "type": "module",
   "version": "0.2.1",
-  "packageManager": "pnpm@10.6.3",
+  "packageManager": "pnpm@10.11.1",
   "description": "Dev kit for me.",
   "author": "Werheng <werheng.zhang@gmail.com>",
   "license": "MIT",
@@ -48,25 +48,25 @@
     "deps:up": "pnpx taze -wr"
   },
   "peerDependencies": {
-    "commitlint": "^19.6.1",
-    "lint-staged": "^15.3.0",
-    "simple-git-hooks": "^2.11.1"
+    "commitlint": ">=19.0.0",
+    "lint-staged": ">=15.0.0",
+    "simple-git-hooks": ">=2.0.0"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.1",
     "citty": "^0.1.6",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.10.1",
-    "@types/node": "^22.13.10",
-    "bumpp": "^10.1.0",
-    "commitlint": "^19.8.0",
-    "eslint": "^9.22.0",
-    "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.8"
+    "@antfu/eslint-config": "^4.13.3",
+    "@types/node": "^22.15.30",
+    "bumpp": "^10.1.1",
+    "commitlint": "^19.8.1",
+    "eslint": "^9.28.0",
+    "simple-git-hooks": "^2.13.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.2"
   }
 }
